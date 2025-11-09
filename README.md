@@ -1,112 +1,149 @@
-# 🛍️ Customer Segmentation & Targeted Marketing Analysis
+# 🧠 Clustermap: Customer Grouping via ML
 
-### 📌 Overview
-This project applies **Unsupervised Machine Learning** using **K-Means clustering** to segment customers based on their **Age**, **Annual Income**, and **Spending Score**.  
-A fully interactive **Streamlit Dashboard** is developed to visualize insights and help businesses create **targeted marketing strategies** for each customer segment.
+### 🚀 Smart Customer Insights Dashboard
 
-Streamlit AppLink : https://customer-segmentation-app-mhclppg3kxkmj3ma6mxjdk.streamlit.app/
+Built with **Streamlit**, **Plotly**, and **scikit-learn**, this interactive project helps businesses understand customers better through **data-driven segmentation, visual analytics, and predictive insights**.
+
+> 👨‍💻 Developed by **Jatin Bandekar** | Data Analytics & Machine Learning Project
+
+---
+
+## 📋 Overview
+
+**Clustermap** leverages **K-Means Clustering** to segment customers based on key behavior metrics such as **Age**, **Recency**, **Frequency**, and **Monetary Value**.
+The dashboard reveals actionable insights for targeted marketing, churn reduction, and customer retention — all in a clean, visual, and interactive format.
+
+🔗 **Live Demo (optional)**: [Coming Soon on Streamlit Cloud]
+
+---
 
 ## 🎯 Objectives
-- Understand customer shopping behavior
-- Segment customers into meaningful groups
-- Analyze cluster characteristics and purchasing power
-- Support targeted marketing strategies with data insights
-- Demonstrate practical Data Analytics + ML + Business skills
+
+* Segment customers using **unsupervised learning (K-Means)**
+* Visualize cluster behavior and demographics
+* Estimate **Customer Lifetime Value (CLTV)** and **Churn Probability**
+* Compare customer groups interactively
+* Provide business-driven insights through data
 
 ---
 
-## 📂 Tech Stack
-| Category | Tools |
-|---------|------|
-| Language | Python |
-| ML Model | K-Means Clustering |
-| Data Analysis | Pandas, NumPy |
-| Visualization | Matplotlib, Seaborn |
-| Interactive App | Streamlit |
-| Version Control | Git & GitHub |
+## 🧰 Tech Stack
+
+| Category             | Tools           |
+| -------------------- | --------------- |
+| **Language**         | Python          |
+| **Machine Learning** | K-Means, PCA    |
+| **Data Handling**    | Pandas, NumPy   |
+| **Visualization**    | Plotly, Seaborn |
+| **Web Framework**    | Streamlit       |
+| **Version Control**  | Git, GitHub     |
 
 ---
 
-## 📊 Dataset Details
-- **Mall Customers Dataset**
-- Source: Public dataset (Kaggle)
-- Features used:
-  - CustomerID (removed during analysis)
-  - Age
-  - Gender (encoded)
-  - Annual Income (k$)
-  - Spending Score (1–100)
+## 📊 Dataset
+
+**Filename:** `ecommerce_customer_data_full.csv`
+**Attributes used:**
+
+* Age
+* Recency (Days since last purchase)
+* Frequency (Transactions per year)
+* Monetary (Annual spending in ₹)
+* Category spends (Electronics, Fashion, Grocery, Lifestyle)
+* Region, Gender, CustomerID
+
+📁 *Source:* Public synthetic e-commerce dataset inspired by Kaggle.
 
 ---
 
-## 🏷️ Clusters Identified (Business Interpretation)
+## 🖥️ Dashboard Features
 
-| Cluster | Description | Behavior | Marketing Strategy |
-|--------|-------------|----------|-------------------|
-| Cluster 0 | Budget-Conscious Youth | Low income, moderate spending | Coupons, discounts, loyalty offers |
-| Cluster 1 | High-Value Loyal Customers | High income, high spending | Premium memberships, exclusive perks |
-| Cluster 2 | Low-Value Risk Group | Low income, low spending | Awareness campaigns, bundle offers |
-| Cluster 3 | Potential High Buyers | High income, low spending | Brand engagement, personalized ads |
-| Cluster 4 | Average Customers | Mid income & spending | Balanced marketing approach |
-
-➡️ These insights enable **smarter customer retention and acquisition** planning.
-
----
-
-## 📈 Visualizations Included
-- Elbow Method to determine optimal clusters
-- 2D scatter plots with cluster separation
-- Spending habits visualization
-- Demographic distribution graphs
-- Cluster-based business insights
+| Feature                      | Description                                                                  |
+| ---------------------------- | ---------------------------------------------------------------------------- |
+| 📈 **Business Overview**     | Real-time KPIs and interactive visualizations for customer behavior.         |
+| 👥 **Customer Profiles**     | Cluster-based segmentation with spend analysis, CLTV, and churn insights.    |
+| 🤖 **Smart Prediction Tool** | Predicts new customer cluster, CLTV, and churn risk.                         |
+| 💹 **Cluster Comparison**    | Compare multiple customer clusters side by side.                             |
+| 🔍 **Insight Generator**     | Auto-generated business personas & marketing recommendations for each group. |
+| ⬇️ **Data Export**           | Download filtered or clustered customer data for business use.               |
 
 ---
 
-## 🖥️ Streamlit Dashboard Features
-✅ Upload or use default dataset  
-✅ Automated clustering  
-✅ Interactive charts  
-✅ Cluster interpretation  
-✅ User-friendly layout  
+## 📸 Screenshots
 
-To run:
+| --------------------- | ---------------------------------------------------- |
+| 🏠 Dashboard Home     | ![Dashboard Overview](assets/dashboard_home.png)     |
+| 👥 Customer Profiles  | ![Customer Profiles](assets/customer_profiles1.png)   |
+                           ![Customer Profiles](assets/customer_profiles2.png)
+| 🤖 Prediction Tool    | ![Prediction Tool](assets/prediction_tool.png)       |
+| 💹 Cluster Comparison | ![Cluster Comparison](assets/cluster_comparison.png) |
+| 💡 Insight Generator  | ![Insight Generator](assets/insight_generator.png)   |
 
-```sh
+---
+
+## ⚙️ Installation & Setup
+
+### 🔽 Step 1: Clone the Repository
+
+```bash
+git clone https://github.com/your-username/clustermap-customer-segmentation.git
+cd clustermap-customer-segmentation
+```
+
+### 📦 Step 2: Install Requirements
+
+```bash
+pip install -r requirements.txt
+```
+
+### ▶️ Step 3: Run the App
+
+```bash
 streamlit run app.py
-🧠 Key Learnings
+```
 
-Data preprocessing & encoding
+---
 
-Feature scaling improves clustering
+## 📈 Sample Output
 
-K-Means parameter tuning using Elbow Method
+Example Cluster Interpretation:
 
-Turning models into business decisions
+| Cluster | Label                | Description                           | Suggested Marketing Strategy |
+| ------- | -------------------- | ------------------------------------- | ---------------------------- |
+| 0       | Loyal Shoppers       | High frequency, high CLTV             | Exclusive loyalty rewards    |
+| 1       | High-Value Wanderers | High spend, low frequency             | Retargeting campaigns        |
+| 2       | Trend Seekers        | Young, spend evenly across categories | Social media ads             |
+| 3       | Value Maximizers     | Budget-conscious, frequent small buys | Discount bundles             |
+| 4       | New Entrants         | Recently acquired customers           | Welcome offers & onboarding  |
 
-Deploying interactive analytical dashboards
+---
 
-🚀 Project Structure
-Customer-Segmentation-Project/
+## 🧩 Folder Structure
+
+```
+Clustermap/
 │── app.py
-│── dataset.csv
-│── model.pkl
+│── ecommerce_customer_data_full.csv
+│── ecommerce_customer_data.csv
+│── requirements.txt
 │── README.md
-└── visualizations/
+│── assets/
 
 
-(We will add graph images here later ✅)
+## 🔮 Future Enhancements
 
-📌 Future Enhancements
+* 📊 Integration with live marketing data APIs
+* 📈 Customer churn forecasting using ML
+* 🌍 Deploy to Streamlit Cloud or Hugging Face Spaces
+* 📬 Add automated email campaign insights
 
-Deploy online using Streamlit Cloud
+---
 
-Add cluster-based prediction for new users
+## 👤 Author
 
-Add more features like Annual Spending / Purchase History
-
-Include Marketing ROI optimization metrics
-
-👤 Author
-
-Somyashree Nayak
+**Jatin Bandekar**
 📍 India
+💼 Data Analytics | Machine Learning | Artificial Intelligence | AI Automation
+📧 [Email Me](mailto:bandekarjatin02@gmail.com)
+🌐 [GitHub](https://github.com/jatinAB)
+
